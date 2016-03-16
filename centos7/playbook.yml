@@ -1,0 +1,16 @@
+- name: ansible playbook
+  hosts: all
+  become: True
+  gather_facts: True
+
+  vars:
+
+  tasks:
+    - name: install EPEL repo
+      yum: name=epel-release state=present
+    - name: curl
+      yum: name=curl state=latest
+  
+  roles:
+    - mobenga-repo-client
+    - teamcity
