@@ -1,0 +1,10 @@
+- name: ansible playbook
+  hosts: all
+  become: True
+  gather_facts: True
+
+  vars:
+
+  tasks:
+  
+  roles:
